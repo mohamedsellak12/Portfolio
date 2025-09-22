@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Footer";
 import { FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import Navbar from "./Components/Navbar";
 
 const projects = [
   {
@@ -67,24 +68,13 @@ export default function App() {
       <button
             data-aos="fade-up"
             onClick={() => setDarkMode(!darkMode)}
-            className="fixed top-4 right-4 p-2 rounded-md bg-gray-200 dark:bg-gray-700 z-50 shadow-lg"
+            className="fixed top-16 right-4 p-2 rounded-md bg-gray-200 dark:bg-gray-700 z-50 shadow-lg"
         >
                 {darkMode ? <FaSun className="text-yellow-400"/> : <FaMoon className="text-gray-900"/>}
         </button>
 
       {/* Navbar */}
-      <header data-aos="fade-down" className="bg-white dark:bg-gray-800 shadow-md">
-        <div className="max-w-5xl mx-auto flex justify-between items-center p-4">
-          <h1 className="text-xl font-bold">Mohamed Sellak</h1>
-          <nav className="space-x-4">
-            <a href="#projects" className="hover:underline">Projets</a>
-            <a href="#skills" className="hover:underline">Compétences</a>
-            <a href="#contact" className="hover:underline">Contact</a>
-          </nav>
-          
-        </div>
-      </header>
-
+      <Navbar/>
       <main className="max-w-5xl mx-auto p-6">
 
         {/* Hero */}
