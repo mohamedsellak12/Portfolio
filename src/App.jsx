@@ -7,6 +7,13 @@ import Navbar from "./Components/Navbar";
 
 const projects = [
   {
+    title:"Weather-app",
+    desc:"Une application web fullstack (React + Node/Express) qui affiche la météo en temps réel d’une ville via une API externe.",
+    tech:["React","Express.js","Nodejs","API"],
+    demo: "#",
+    repo: "https://github.com/mohamedsellak12/weather-app.git"
+  },
+  {
     title: "BlogApp",
     desc: "Une plateforme sociale permettant de publier des articles, d’ajouter des commentaires et d’exprimer des réactions (likes).",
     tech: ["Angular", "Tailwind", "Express.js","MongoDB"],
