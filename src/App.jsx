@@ -2,50 +2,58 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Footer";
-import { FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import { FaGithub, FaMoon, FaGlobe , FaSun } from "react-icons/fa";
 import Navbar from "./Components/Navbar";
+// import { BiRadioCircleMarked } from "react-icons/bi";
 
 const projects = [
   {
+    title:"Movies land",
+    desc:"Movies Land est une application web développée avec Next.js qui permet d’explorer, rechercher et découvrir des films et séries via l’API TMDB.",
+    tech:["next.js","TailwindCSS","Swiper.js","API","TypeScript"],
+    demo:"https://movies-land-amber.vercel.app/",
+    repo:"https://github.com/mohamedsellak12/Movies-Land.git"
+  },
+  {
     title:"Weather-app",
     desc:"Une application web fullstack (React + Node/Express) qui affiche la météo en temps réel d’une ville via une API externe.",
-    tech:["React","Express.js","Nodejs","API"],
-    demo: "#",
+    tech:["React","TailwindCSS","Nodejs","API"],
+    demo: "https://weather-app-sigma-rust.vercel.app/",
     repo: "https://github.com/mohamedsellak12/weather-app.git"
   },
   {
     title: "BlogApp",
     desc: "Une plateforme sociale permettant de publier des articles, d’ajouter des commentaires et d’exprimer des réactions (likes).",
-    tech: ["Angular", "Tailwind", "Express.js","MongoDB"],
-    demo: "#",
+    tech: ["Angular", "TailwindCSS", "Express.js","MongoDB","TypeScript"],
+    demo: null,
     repo: "https://github.com/mohamedsellak12/BlogApp.git"
   },
   {
     title: "PrayersTimming",
     desc: "Application web affichant les horaires de prière en fonction de la localisation de l’utilisateur, avec intégration du Coran en version écrite et audio (consommation d’APIs).",
-    tech: ["Angular", "API", "Tailwind"],
-    demo: "#",
+    tech: ["Angular", "API", "TailwindCSS","TypeScript"],
+    demo: "https://prayers-timming.vercel.app/",
     repo: "https://github.com/mohamedsellak12/PrayersTimming.git"
   },
   {
     title: "TakeIt",
     desc: "Plateforme en ligne jouant le rôle d’intermédiaire entre les organisateurs d’événements et les clients, permettant la réservation et l’achat de tickets en ligne (Projet de fin d’études 2025).",
-    tech: ["Angular","Tailwind", "Laravel", "Stripe", "MySQL"],
-    demo: "#",
+    tech: ["Angular","TailwindCSS", "Laravel", "Stripe", "MySQL"],
+    demo: null,
     repo: "https://github.com/mohamedsellak12/TakeIt2025.git"
   },
   {
     title: "MemoryGameApp",
     desc: "Jeu web interactif de mémoire consistant à associer des cartes, développé pour améliorer la concentration et le divertissement.",
-    tech: ["Angular", "Tailwind", "TypeScript"],
-    demo: "#",
+    tech: ["Angular", "TailwindCSS", "TypeScript"],
+    demo: null,
     repo: "https://github.com/mohamedsellak12/MemorygameApp.git"
   },
   {
     title: "Education Land",
     desc: "Plateforme éducative dédiée à une école primaire privée pour la gestion des inscriptions, du suivi des élèves et des paiements (Projet de fin d’études 2024).",
     tech: ["Laravel", "MySQL", "Bootstrap"],
-    demo: "#",
+    demo: null,
     repo: "https://github.com/mohamedsellak12/MYPFE.git"
   }
 ];
@@ -125,9 +133,11 @@ export default function App() {
                 <div className="mb-2">
                   {p.tech.map(t => <Badge key={t}>{t}</Badge>)}
                 </div>
-                <div className="flex gap-2 hover:text-gray-600 dark:hover:text-gray-300">
-                  <a href={p.repo} className="text-3xl"> <FaGithub/> </a>
+                <div className="flex gap-2  dark:hover:text-gray-300">
+                  <a href={p.repo} target="-" className=" hover:text-gray-600 text-3xl"> <FaGithub/> </a>
+                 { p.demo? <a href={p.demo} target="-" className="hover:text-gray-600 text-3xl"> <FaGlobe   /> </a>:""}
                 </div>
+               
               </div>
             ))}
           </div>
