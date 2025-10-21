@@ -4,8 +4,19 @@ import "aos/dist/aos.css";
 import Footer from "./Footer";
 import { FaGithub, FaMoon, FaGlobe, FaSun } from "react-icons/fa";
 import Navbar from "./Components/Navbar";
+import Skills from "./Components/Skills";
+import ContactForm from "./Components/ContactForm";
 
 const projects = [
+  {
+     title: "OnTalk",
+     desc:"OnTalk est une application de chat instantané simple et moderne pour communiquer et partager en temps réel.",
+     tech:["React","TailwindCSS","Nodejs","JavaScript","MongoDB" ],
+     demo:null,
+     repo:"https://github.com/mohamedsellak12/ChatApp-Front.git",
+     image:"/projects/OnTalk.png"
+  }
+  ,
   {
     title: "Translate App",
     desc: "Une application Next.js moderne permettant de traduire automatiquement du texte entre plusieurs langues grâce à l’API MyMemory.",
@@ -94,7 +105,7 @@ export default function App() {
       window.scrollTo({
     top: 0,
     left: 0,
-    behavior: "smooth", // optionnel : animation fluide
+    behavior: "smooth",
   });
 
   }, []);
@@ -108,55 +119,61 @@ export default function App() {
       <Navbar />
 
       {/* Hero */}
-      <section 
-      className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto p-6 pt-28 mb-24"
-         data-aos="fade-up"
-       >
-        <div className="md:w-2/3 space-y-4">
-          <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Salut, je suis Mohamed Sellak 👋
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            Développeur fullstack passionné, spécialisé en <b>React</b>, <b>Angular</b> et <b>Laravel</b>.
-            Je conçois des applications web performantes et intuitives.
-          </p>
-          <a
-            href="#projects"
-            className="inline-block px-6 py-3 mt-4 text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-semibold shadow-lg hover:opacity-90 transition-all"
-          >
-            Voir mes projets
-          </a>
-        </div>
+<section 
+  className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto p-6 pt-28 mb-24"
+  data-aos="fade-up"
+>
+  <div className="md:w-2/3 space-y-4">
+    <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      Salut, je suis Mohamed Sellak  <span className="text-white" >👋</span>
+    </h1>
+    
+    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+      Développeur fullstack passionné, spécialisé en <b>React</b> et <b>Laravel</b>.
+      Je conçois des applications web performantes et intuitives.
+    </p>
 
-       <div data-aos="fade-left" className="mt-10 md:mt-0 relative w-48 md:w-64 mx-auto">
-             {/* Halo flou derrière l'avatar */}
-          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-600 opacity-40 blur-3xl"></div>
+    {/* Boutons */}
+    <div className="flex flex-wrap gap-4 mt-4">
+      <a
+        href="#projects"
+        className="inline-block px-6 py-3 text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-semibold shadow-lg hover:opacity-90 transition-all"
+      >
+        Voir mes projets
+      </a>
 
-         <img
-           src="/profile.JPG"
-              alt="avatar"
-             className="w-full rounded-full border-4 border-blue-500/40 shadow-2xl hover:scale-105 transition-transform"
-             />
-            </div>
+      <a
+        href="/CVprofessionelle.pdf"
+        download
+        className="inline-block px-6 py-3 text-white bg-gradient-to-r from-green-500 to-teal-500 rounded-xl font-semibold shadow-lg hover:opacity-90 transition-all"
+      >
+        Télécharger mon CV
+      </a>
+    </div>
+  </div>
 
-      </section>
+  {/* Avatar */}
+  <div data-aos="fade-left" className="mt-10 md:mt-0 relative w-48 md:w-64 mx-auto">
+    {/* Halo flou derrière l'avatar */}
+    <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-600 opacity-40 blur-3xl"></div>
 
-      {/* Compétences */}
-      <section id="skills" data-aos="zoom-in" className="max-w-6xl mx-auto mb-20 px-6">
-        <h3 className="text-3xl font-bold mb-6 text-center text-blue-600 dark:text-blue-400">Compétences</h3>
-        <div className="flex flex-wrap justify-center gap-2">
-          {[
-            "React", "Angular", "Tailwind CSS", "Bootstrap", "JavaScript", "TypeScript", "Laravel",
-            "Node.js", "Express.js", "Django", "MySQL", "MongoDB", "Git", "REST API"
-          ].map(skill => <Badge key={skill}>{skill}</Badge>)}
-        </div>
-      </section>
+    <img
+      src="/profile.JPG"
+      alt="avatar"
+      className="w-full rounded-full border-4 border-blue-500/40 shadow-2xl hover:scale-105 transition-transform"
+    />
+  </div>
+</section>
+
+    {/* Compétences */}
+<Skills/>
+
 
      <section id="projects" data-aos="fade-up" className="max-w-6xl mx-auto mb-24 px-6">
   <h3 className="text-3xl font-bold mb-8 text-center text-purple-600 dark:text-purple-400">
     Projets récents
   </h3>
-  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
     {projects.map(p => (
       <div
         key={p.title}
@@ -200,10 +217,18 @@ export default function App() {
         <p className="mb-6 text-gray-700 dark:text-gray-300">
           Intéressé par une collaboration, un projet ou une opportunité ? Contactez-moi 👇
         </p>
+
+        <ContactForm/>
+        
         <div className="flex flex-col md:flex-row justify-center gap-6">
-          <a href="mailto:mohamedsellak597@example.com" className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 transition-all">
-            Email
-          </a>
+        <a
+  href="https://mail.google.com/mail/?view=cm&to=mohamedsellak597@gmail.com&su=Contact%20Portfolio&body=Bonjour%20Mohamed"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 transition-all"
+>
+  Email 
+</a>
           <a href="tel:+212681226124" className="px-6 py-3 rounded-lg border border-blue-500 text-blue-600 dark:text-blue-400 font-semibold hover:bg-blue-600 hover:text-white transition-all">
             +212 6 81 22 61 24
           </a>
