@@ -8,6 +8,14 @@ import Skills from "./Components/Skills";
 import ContactForm from "./Components/ContactForm";
 
 const projects = [
+   {
+     title: "Tic tac toe",
+     desc:"Jeu Tic Tac Toe développé en React avec Vite et Tailwind CSS, incluant un mode joueur vs joueur et joueur vs robot.",
+     tech:["React","TailwindCSS","JavaScript" ],
+     demo:"https://tic-tac-toe-pi-one-81.vercel.app/",
+     repo:"https://github.com/mohamedsellak12/tic-tac-toe.git",
+     image:"/projects/tictactoe.png"
+  },
   {
      title: "OnTalk",
      desc:"OnTalk est une application de chat instantané simple et moderne pour communiquer et partager en temps réel.",
