@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Footer";
-import { FaGithub, FaMoon, FaGlobe, FaSun } from "react-icons/fa";
+import { FaGithub, FaMoon, FaGlobe, FaSun, FaDownload } from "react-icons/fa";
 import Navbar from "./Components/Navbar";
 import Skills from "./Components/Skills";
 import ContactForm from "./Components/ContactForm";
+import About from "./Components/About";
+import Experience from "./Components/Experience";
 
 const projects = [
    {
@@ -143,19 +145,17 @@ export default function App() {
 
     {/* Boutons */}
     <div className="flex flex-wrap gap-4 mt-4">
+     
       <a
-        href="#projects"
+        href="/CV.pdf"
+        download
         className="inline-block px-6 py-3 text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-semibold shadow-lg hover:opacity-90 transition-all"
       >
-        Voir mes projets
-      </a>
-
-      <a
-        href="/CVprofessionelle.pdf"
-        download
-        className="inline-block px-6 py-3 text-white bg-gradient-to-r from-green-500 to-teal-500 rounded-xl font-semibold shadow-lg hover:opacity-90 transition-all"
-      >
-        Télécharger mon CV
+        <button className="flex items-center gap-2">
+      <FaDownload />
+      Télécharger mon CV
+    </button>
+        
       </a>
     </div>
   </div>
@@ -173,9 +173,12 @@ export default function App() {
   </div>
 </section>
 
+<About/>
+
     {/* Compétences */}
 <Skills/>
 
+<Experience/>
 
      <section id="projects" data-aos="fade-up" className="max-w-6xl mx-auto mb-24 px-6">
   <h3 className="text-3xl font-bold mb-8 text-center text-purple-600 dark:text-purple-400">
@@ -240,7 +243,7 @@ export default function App() {
           <a href="tel:+212681226124" className="px-6 py-3 rounded-lg border border-blue-500 text-blue-600 dark:text-blue-400 font-semibold hover:bg-blue-600 hover:text-white transition-all">
             +212 6 81 22 61 24
           </a>
-          <a href="https://www.linkedin.com/in/mohamed-sellak-703b142a3/" target="_blank" className="px-6 py-3 rounded-lg border border-purple-500 text-purple-600 dark:text-purple-400 font-semibold hover:bg-purple-600 hover:text-white transition-all">
+          <a href="https://www.linkedin.com/in/mohamed-sellak-28a87539b/" target="_blank" className="px-6 py-3 rounded-lg border border-purple-500 text-purple-600 dark:text-purple-400 font-semibold hover:bg-purple-600 hover:text-white transition-all">
             LinkedIn
           </a>
         </div>

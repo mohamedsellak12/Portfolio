@@ -26,7 +26,8 @@ export default function Skills() {
   const filteredSkills = filter === "All" ? skills : skills.filter(s => s.type === filter);
 
   return (
-    <section id="skills" data-aos="zoom-in" className="max-w-6xl mx-auto mb-20 px-6">
+    <section data-aos="zoom-in" className="max-w-6xl mx-auto mb-20 px-6">
+    
       <h3 className="text-3xl font-bold mb-6 text-center text-blue-600 dark:text-blue-400">
         Compétences
       </h3>
