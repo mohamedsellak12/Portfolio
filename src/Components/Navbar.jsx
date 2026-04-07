@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaMoon, FaSun, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+    const { t, i18n } = useTranslation();
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
@@ -19,11 +22,11 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: "#projects", label: "Projets" },
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Compétences" },
-    { href: "#experience", label: "Experience" },
-    { href: "#contact", label: "Contact" },
+    { href: "#projects", label: t("navbar.projects") },
+    { href: "#about", label: t("navbar.about") },
+    { href: "#skills", label: t("navbar.skills") },
+    { href: "#experience", label: t("navbar.experience") },
+    { href: "#contact", label: t("navbar.contact") },
   ];
 
   return (
@@ -60,6 +63,33 @@ export default function Navbar() {
           <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
         </a>
       ))}
+
+       {/* 🌍 Language Switcher */}
+          <div className="flex items-center gap-2 ml-4 border border-gray-300 dark:border-gray-700 rounded-lg p-1 bg-gray-100 dark:bg-gray-800">
+  <button
+    onClick={() => i18n.changeLanguage("fr")}
+    className={`px-3 py-1 rounded-lg transition-colors duration-200 ${
+      i18n.language === "fr"
+        ? "text-white bg-gradient-to-r from-blue-600 to-purple-600"
+        : "text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700"
+    }`}
+  >
+    FR
+  </button>
+  <button
+    onClick={() => i18n.changeLanguage("en")}
+    className={`px-3 py-1 rounded-lg transition-colors duration-200 ${
+      i18n.language === "en"
+        ? "text-white bg-gradient-to-r from-blue-600 to-purple-600"
+        : "text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700"
+    }`}
+  >
+    EN
+  </button>
+</div>
+
+
+
       {/* Bouton Dark Mode pour desktop */}
       <button
         onClick={() => setDarkMode(!darkMode)}
@@ -110,6 +140,32 @@ export default function Navbar() {
             {link.label}
           </a>
         ))}
+
+         <div className="flex gap-3 mt-4">
+
+    <button
+       onClick={() => i18n.changeLanguage("fr")}
+      className={`px-4 py-2 rounded-lg font-medium transition ${
+        i18n.language === "fr"
+          ? "text-white bg-gradient-to-r from-blue-600 to-purple-600"
+          : "bg-gray-200 dark:bg-gray-700"
+      }`}
+    >
+      Fr
+    </button>
+
+    <button
+        onClick={() => i18n.changeLanguage("en")}
+      className={`px-4 py-2 rounded-lg font-medium transition ${
+        i18n.language === "en"
+          ? "text-white bg-gradient-to-r from-blue-600 to-purple-600"
+          : "bg-gray-200 dark:bg-gray-700"
+      }`}
+    >
+      En
+    </button>
+
+  </div>
       </motion.div>
     )}
   </AnimatePresence>

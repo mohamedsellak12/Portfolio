@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { FaCode, FaLaptopCode, FaRocket } from "react-icons/fa";
 
+import { useTranslation } from "react-i18next";
+
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="max-w-6xl mx-auto px-6 mb-32 overflow-hidden">
 
@@ -13,7 +17,7 @@ export default function About() {
         className="text-3xl md:text-4xl font-bold text-center mb-12"
       >
         <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          About Me
+          {t("about.title")}
         </span>
       </motion.h2>
 
@@ -28,20 +32,17 @@ export default function About() {
           className="space-y-5 text-center md:text-left"
         >
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            Je suis <span className="font-semibold text-blue-500">Mohamed Sellak</span>, 
-            développeur Full Stack passionné par la création d'applications web modernes.
-            J’aime transformer des idées en solutions digitales performantes.
+            {t("about.p0")}
+            <span className="font-semibold text-blue-500"> Mohamed Sellak</span>
+            {t("about.p1").replace("Mohamed Sellak", "")}
           </p>
 
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            Spécialisé en <span className="text-purple-500 font-semibold">React</span> et{" "}
-            <span className="text-pink-500 font-semibold">Laravel</span>, 
-            je développe des interfaces fluides et des backends robustes.
+            {t("about.p2")}
           </p>
 
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            Mon objectif est de créer des expériences utilisateur intuitives, rapides 
-            et adaptées aux besoins réels.
+            {t("about.p3")}
           </p>
         </motion.div>
 
@@ -57,9 +58,9 @@ export default function About() {
           <div className="flex items-center gap-4 p-5 rounded-2xl bg-white/70 dark:bg-gray-800/60 backdrop-blur-lg shadow-md hover:shadow-xl transition">
             <FaCode className="text-3xl text-blue-500" />
             <div>
-              <h4 className="font-semibold">Clean Code</h4>
+              <h4 className="font-semibold">{t("about.cards.clean_title")}</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                Code structuré, maintenable et scalable
+                {t("about.cards.clean_desc")}
               </p>
             </div>
           </div>
@@ -68,9 +69,9 @@ export default function About() {
           <div className="flex items-center gap-4 p-5 rounded-2xl bg-white/70 dark:bg-gray-800/60 backdrop-blur-lg shadow-md hover:shadow-xl transition">
             <FaLaptopCode className="text-3xl text-purple-500" />
             <div>
-              <h4 className="font-semibold">Modern UI</h4>
+              <h4 className="font-semibold">{t("about.cards.ui_title")}</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                Interfaces modernes avec React & Tailwind
+                {t("about.cards.ui_desc")}
               </p>
             </div>
           </div>
@@ -79,9 +80,9 @@ export default function About() {
           <div className="flex items-center gap-4 p-5 rounded-2xl bg-white/70 dark:bg-gray-800/60 backdrop-blur-lg shadow-md hover:shadow-xl transition">
             <FaRocket className="text-3xl text-pink-500" />
             <div>
-              <h4 className="font-semibold">Performance</h4>
+              <h4 className="font-semibold">{t("about.cards.perf_title")}</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                Applications rapides et optimisées
+                {t("about.cards.perf_desc")}
               </p>
             </div>
           </div>

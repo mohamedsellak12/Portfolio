@@ -1,79 +1,49 @@
-import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { FaDownload } from "react-icons/fa";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 pt-32 pb-20">
+    <section
+      className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto p-6 pt-28 mb-24"
+      data-aos="fade-up"
+    >
+      <div className="md:w-2/3 space-y-4">
 
-      {/* 🔥 Background Glow */}
-      <div className="absolute inset-0 -z-10">
-        <div className="w-[400px] h-[400px] bg-blue-400/30 blur-[120px] rounded-full absolute top-0 left-0"></div>
-        <div className="w-[400px] h-[400px] bg-pink-400/30 blur-[120px] rounded-full absolute bottom-0 right-0"></div>
-      </div>
-
-      {/* 🔹 Text */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="md:w-2/3 space-y-6 text-center md:text-left"
-      >
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-          <span className="block text-gray-800 dark:text-white">
-            Hi, I'm
-          </span>
-
-          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Mohamed Sellak
-          </span>
+        {/* 🔥 Title */}
+        <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          {t("hero.title")} <span className="text-white">👋</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-          Full Stack Developer specialized in{" "}
-          <span className="font-semibold text-blue-500">React</span> &{" "}
-          <span className="font-semibold text-purple-500">Laravel</span>.  
-          I build modern, scalable and high-performance web applications.
+        {/* 🔹 Description */}
+        <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          {t("hero.desc")}
         </p>
 
-        {/* 🔥 CTA Buttons */}
-        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-
-          <a
-            href="#projects"
-            className="px-6 py-3 rounded-xl text-white font-semibold
-            bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
-            shadow-lg hover:scale-105 hover:shadow-pink-500/30 transition-all"
-          >
-            🚀 View Projects
-          </a>
-
+        {/* 🔹 Button */}
+        <div className="flex flex-wrap gap-4 mt-4">
           <a
             href="/CV.pdf"
             download
-            className="px-6 py-3 rounded-xl font-semibold border border-gray-300 dark:border-gray-700
-            hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-semibold shadow-lg hover:opacity-90 transition-all"
           >
-            📄 Download CV
+            <FaDownload />
+            {t("hero.cv")}
           </a>
-
         </div>
-      </motion.div>
+      </div>
 
       {/* 🔹 Avatar */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-        className="mt-12 md:mt-0 relative w-52 md:w-72"
-      >
-        {/* Glow */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 opacity-40 blur-3xl"></div>
+      <div className="mt-10 md:mt-0 relative w-48 md:w-64 mx-auto">
+        <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-600 opacity-40 blur-3xl"></div>
 
         <img
           src="/profile.JPG"
-          alt="Mohamed Sellak"
-          className="relative w-full rounded-full border-4 border-white/20 shadow-2xl backdrop-blur-md hover:scale-105 transition"
+          alt="avatar"
+          className="w-full rounded-full border-4 border-blue-500/40 shadow-2xl hover:scale-105 transition-transform"
         />
-      </motion.div>
+      </div>
     </section>
   );
 }

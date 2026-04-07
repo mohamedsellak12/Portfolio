@@ -1,0 +1,191 @@
+{
+  "hero": {
+    "title": "Hi, I'm Mohamed Sellak",
+    "desc": "Full Stack Developer passionate about building modern web applications with React and Laravel.",
+    "cv": "Download CV"
+  },
+  "navbar": {
+    "projects": "Projects",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "p0": "I am",
+    "p1": " Mohamed Sellak, a Full Stack Developer passionate about building modern web applications. I love turning ideas into powerful digital solutions.",
+    "p2": "Specialized in React and Laravel, I build smooth user interfaces and robust backends.",
+    "p3": "My goal is to create intuitive, fast and user-centered experiences.",
+    "cards": {
+      "clean_title": "Clean Code",
+      "clean_desc": "Structured, maintainable and scalable code",
+      "ui_title": "Modern UI",
+      "ui_desc": "Modern interfaces with React & Tailwind",
+      "perf_title": "Performance",
+      "perf_desc": "Fast and optimized applications"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "types": {
+      "all": "All",
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Database",
+      "tools": "Tools"
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "experiences": [
+      {
+        "role": "Developer Intern",
+        "company": "Afridata Services, Casablanca",
+        "period": "11/01/2025 - 01/31/2026 (3 months)",
+        "star": {
+          "situation": "Company needed a desktop application to manage internal operations.",
+          "task": "Participate in development and maintenance of the application.",
+          "action": "Implemented features, fixed bugs and improved performance.",
+          "result": "Application more stable and performant, better user experience."
+        }
+      },
+      {
+        "role": "Final Year Intern",
+        "company": "CotStyles, Casablanca",
+        "period": "04/01/2024 - 04/30/2024 (1 month)",
+        "star": {
+          "situation": "Needed a digital solution for an academic project in a company.",
+          "task": "Design and develop a suitable web application.",
+          "action": "Developed frontend and backend with main features integration.",
+          "result": "Functional application meeting project requirements."
+        }
+      }
+    ],
+    "labels": {
+      "situation": "Situation",
+      "task": "Task",
+      "action": "Action",
+      "result": "Result"
+    }
+  },
+  
+  "projects": {
+    "title": "Recent Projects",
+    "list": [
+      {
+        "title": "Tic tac toe",
+        "desc":"Tic Tac Toe game developed in React with Vite and Tailwind CSS, including player vs player and player vs AI modes.",
+        "tech":["React","TailwindCSS","JavaScript"],
+        "demo":"https://tic-tac-toe-pi-one-81.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/tic-tac-toe.git",
+        "image":"/projects/tictactoe.png"
+      },
+      {
+        "title": "OnTalk",
+        "desc":"OnTalk is a simple modern instant messaging app for communicating and sharing in real-time.",
+        "tech":["React","TailwindCSS","Nodejs","JavaScript","MongoDB"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/ChatApp-Front.git",
+        "image":"/projects/OnTalk.png"
+      },
+      {
+        "title": "Translate App",
+        "desc":"A modern Next.js app to automatically translate text between multiple languages using the MyMemory API.",
+        "tech":["Next.js","TailwindCSS","API","TypeScript"],
+        "demo":"https://translate-app-pi-nine.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/Translate-App.git",
+        "image":"/projects/translate.png"
+      },
+      {
+        "title": "Movies Land",
+        "desc":"Movies Land is a web app to explore and discover movies and TV shows via the TMDB API.",
+        "tech":["Next.js","TailwindCSS","Swiper.js","API","TypeScript"],
+        "demo":"https://movies-land-amber.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/Movies-Land.git",
+        "image":"/projects/movies.png"
+      },
+      {
+        "title":"Weather-app",
+        "desc":"Fullstack web app (React + Node/Express) that shows real-time weather for a city via an external API.",
+        "tech":["React","TailwindCSS","Nodejs","API"],
+        "demo":"https://weather-app-sigma-rust.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/weather-app.git",
+        "image":"/projects/weather.png"
+      },
+      {
+        "title":"BlogApp",
+        "desc":"Social platform to post articles, add comments, and react with likes.",
+        "tech":["Angular","TailwindCSS","Express.js","MongoDB","TypeScript"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/BlogApp.git",
+        "image":"/projects/blogapp.png"
+      },
+      {
+        "title":"Nour Islam",
+        "desc":"Web app showing prayer times based on user location, with Quran integration (text & audio) using APIs.",
+        "tech":["Angular","API","TailwindCSS","TypeScript"],
+        "demo":"https://nour-islam.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/PrayersTimming.git",
+        "image":"/projects/nour.png"
+      },
+      {
+        "title":"TakeIt",
+        "desc":"Online platform connecting event organizers and clients, allowing ticket reservation and purchase online (Final Year Project 2025).",
+        "tech":["Angular","TailwindCSS","Laravel","Stripe","MySQL"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/TakeIt2025.git",
+        "image":"/projects/takeit.png"
+      },
+      {
+        "title":"MemoryGameApp",
+        "desc":"Interactive memory game web app where users match cards, developed for concentration and entertainment.",
+        "tech":["Angular","TailwindCSS","TypeScript"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/MemorygameApp.git",
+        "image":"/projects/memory.png"
+      },
+      {
+        "title":"Education Land",
+        "desc":"Educational platform for a private primary school to manage registrations, student tracking and payments (Final Year Project 2024).",
+        "tech":["Laravel","MySQL","Bootstrap"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/MYPFE.git",
+        "image":"/projects/image.png"
+      }
+    ]
+  },
+  
+  "contact": {
+    "title": "Interested in a collaboration, a project, or an opportunity? Contact me 👇",
+    "inputs": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message"
+    },
+    "button": "Send",
+    "status": {
+      "success": "Message sent successfully ✅",
+      "error": "Error while sending ❌"
+    }
+  },
+
+  "footer": {
+    "about_title": "Mohamed Sellak",
+    "about_desc": "Full Stack Developer specialized in React, Angular, and Laravel. I build modern, high-performance, and scalable web applications.",
+    "navigation_title": "Navigation",
+    "nav_about": "About",
+    "nav_projects": "Projects",
+    "nav_skills": "Skills",
+    "nav_contact": "Contact",
+    "contact_title": "Contact",
+    "email": "mohamedsellak597@gmail.com",
+    "email_link_subject": "Portfolio Contact",
+    "email_link_body": "Hello Mohamed",
+    "social_github": "GitHub",
+    "social_linkedin": "LinkedIn",
+    "copyright": "© {{year}} Mohamed Sellak. All rights reserved."
+  }
+
+
+}

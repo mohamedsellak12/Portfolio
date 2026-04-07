@@ -1,0 +1,190 @@
+{
+  "hero": {
+    "title": "Salut, je suis Mohamed Sellak",
+    "desc": "Développeur fullstack passionné, spécialisé en React et Laravel. Je conçois des applications web performantes et intuitives.",
+    "cv": "Télécharger mon CV"
+  },
+  "navbar": {
+    "projects": "Projets",
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "p0": "Je suis",
+    "p1": " Mohamed Sellak, développeur Full Stack passionné par la création d'applications web modernes. J’aime transformer des idées en solutions digitales performantes.",
+    "p2": "Spécialisé en React et Laravel, je développe des interfaces fluides et des backends robustes.",
+    "p3": "Mon objectif est de créer des expériences utilisateur intuitives, rapides et adaptées aux besoins réels.",
+    "cards": {
+      "clean_title": "Clean Code",
+      "clean_desc": "Code structuré, maintenable et scalable",
+      "ui_title": "Modern UI",
+      "ui_desc": "Interfaces modernes avec React & Tailwind",
+      "perf_title": "Performance",
+      "perf_desc": "Applications rapides et optimisées"
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "types": {
+      "all": "Tous",
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Base de données",
+      "tools": "Outils"
+    }
+  },
+ "experience": {
+    "title": "Expériences professionnelles",
+    "experiences": [
+      {
+        "role": "Stagiaire Développeur",
+        "company": "Afridata Services, Casablanca",
+        "period": "01/11/2025 - 31/01/2026 (3 mois)",
+        "star": {
+          "situation": "Entreprise ayant besoin d’une application desktop pour gérer ses opérations internes.",
+          "task": "Participer au développement et à la maintenance de l’application.",
+          "action": "Implémentation de fonctionnalités, correction de bugs et amélioration des performances.",
+          "result": "Application plus stable et performante, meilleure expérience utilisateur."
+        }
+      },
+      {
+        "role": "Stagiaire PFE",
+        "company": "CotStyles, Casablanca",
+        "period": "01/04/2024 - 30/04/2024 (1 mois)",
+        "star": {
+          "situation": "Besoin d’une solution digitale pour un projet académique en entreprise.",
+          "task": "Concevoir et développer une application web adaptée.",
+          "action": "Développement du frontend et backend avec intégration des fonctionnalités principales.",
+          "result": "Application fonctionnelle répondant aux besoins du projet."
+        }
+      }
+    ],
+    "labels": {
+      "situation": "Situation",
+      "task": "Tâche",
+      "action": "Action",
+      "result": "Résultat"
+    }
+  },
+  "projects": {
+    "title": "Projets récents",
+    "list": [
+      {
+        "title": "Tic tac toe",
+        "desc": "Jeu Tic Tac Toe développé en React avec Vite et Tailwind CSS, incluant un mode joueur vs joueur et joueur vs robot.",
+        "tech": ["React","TailwindCSS","JavaScript"],
+        "demo":"https://tic-tac-toe-pi-one-81.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/tic-tac-toe.git",
+        "image":"/projects/tictactoe.png"
+      },
+      {
+        "title": "OnTalk",
+        "desc":"OnTalk est une application de chat instantané simple et moderne pour communiquer et partager en temps réel.",
+        "tech":["React","TailwindCSS","Nodejs","JavaScript","MongoDB"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/ChatApp-Front.git",
+        "image":"/projects/OnTalk.png"
+      },
+      {
+        "title": "Translate App",
+        "desc":"Une application Next.js moderne permettant de traduire automatiquement du texte entre plusieurs langues grâce à l’API MyMemory.",
+        "tech":["Next.js","TailwindCSS","API","TypeScript"],
+        "demo":"https://translate-app-pi-nine.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/Translate-App.git",
+        "image":"/projects/translate.png"
+      },
+      {
+        "title": "Movies Land",
+        "desc":"Movies Land est une application web qui permet d’explorer et découvrir des films et séries via l’API TMDB.",
+        "tech":["Next.js","TailwindCSS","Swiper.js","API","TypeScript"],
+        "demo":"https://movies-land-amber.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/Movies-Land.git",
+        "image":"/projects/movies.png"
+      },
+      {
+        "title":"Weather-app",
+        "desc":"Une application web fullstack (React + Node/Express) qui affiche la météo en temps réel d’une ville via une API externe.",
+        "tech":["React","TailwindCSS","Nodejs","API"],
+        "demo":"https://weather-app-sigma-rust.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/weather-app.git",
+        "image":"/projects/weather.png"
+      },
+      {
+        "title":"BlogApp",
+        "desc":"Une plateforme sociale permettant de publier des articles, d’ajouter des commentaires et d’exprimer des réactions (likes).",
+        "tech":["Angular","TailwindCSS","Express.js","MongoDB","TypeScript"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/BlogApp.git",
+        "image":"/projects/blogapp.png"
+      },
+      {
+        "title":"Nour Islam",
+        "desc":"Application web affichant les horaires de prière en fonction de la localisation de l’utilisateur, avec intégration du Coran en version écrite et audio (consommation d’APIs).",
+        "tech":["Angular","API","TailwindCSS","TypeScript"],
+        "demo":"https://nour-islam.vercel.app/",
+        "repo":"https://github.com/mohamedsellak12/PrayersTimming.git",
+        "image":"/projects/nour.png"
+      },
+      {
+        "title":"TakeIt",
+        "desc":"Plateforme en ligne jouant le rôle d’intermédiaire entre les organisateurs d’événements et les clients, permettant la réservation et l’achat de tickets en ligne (Projet de fin d’études 2025).",
+        "tech":["Angular","TailwindCSS","Laravel","Stripe","MySQL"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/TakeIt2025.git",
+        "image":"/projects/takeit.png"
+      },
+      {
+        "title":"MemoryGameApp",
+        "desc":"Jeu web interactif de mémoire consistant à associer des cartes, développé pour améliorer la concentration et le divertissement.",
+        "tech":["Angular","TailwindCSS","TypeScript"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/MemorygameApp.git",
+        "image":"/projects/memory.png"
+      },
+      {
+        "title":"Education Land",
+        "desc":"Plateforme éducative dédiée à une école primaire privée pour la gestion des inscriptions, du suivi des élèves et des paiements (Projet de fin d’études 2024).",
+        "tech":["Laravel","MySQL","Bootstrap"],
+        "demo":null,
+        "repo":"https://github.com/mohamedsellak12/MYPFE.git",
+        "image":"/projects/image.png"
+      }
+    ]
+  },
+  
+  "contact": {
+    "title": "Intéressé par une collaboration, un projet ou une opportunité ? Contactez-moi 👇",
+    "inputs": {
+      "name": "Votre nom",
+      "email": "Votre email",
+      "message": "Votre message"
+    },
+    "button": "Envoyer",
+    "status": {
+      "success": "Message envoyé avec succès ✅",
+      "error": "Erreur lors de l'envoi ❌"
+    }
+  },
+  
+  "footer": {
+    "about_title": "Mohamed Sellak",
+    "about_desc": "Développeur Full Stack spécialisé en React, Angular et Laravel. Je crée des applications web modernes, performantes et scalables.",
+    "navigation_title": "Navigation",
+    "nav_about": "À propos",
+    "nav_projects": "Projets",
+    "nav_skills": "Compétences",
+    "nav_contact": "Contact",
+    "contact_title": "Contact",
+    "email": "mohamedsellak597@gmail.com",
+    "email_link_subject": "Contact Portfolio",
+    "email_link_body": "Bonjour Mohamed",
+    "social_github": "GitHub",
+    "social_linkedin": "LinkedIn",
+    "copyright": "© {{year}} Mohamed Sellak. Tous droits réservés."
+  }
+
+
+}
