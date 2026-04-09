@@ -5,10 +5,21 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section
+    <section id="hero"
       className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto p-6 pt-28 mb-24"
       data-aos="fade-up"
     >
+      {/* 🔹 Avatar */}
+      <div className=" md:mt-0 relative w-48 md:w-64 mx-auto">
+        <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-600 opacity-40 blur-3xl"></div>
+
+        <img
+          src="/profile.JPG"
+          alt="avatar"
+          className="w-full rounded-full border-4 border-blue-500/40 shadow-2xl hover:scale-105 transition-transform"
+        />
+      </div>
+
       <div className="md:w-2/3 space-y-4">
 
         {/* 🔥 Title */}
@@ -34,16 +45,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 🔹 Avatar */}
-      <div className="mt-10 md:mt-0 relative w-48 md:w-64 mx-auto">
-        <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-600 opacity-40 blur-3xl"></div>
-
-        <img
-          src="/profile.JPG"
-          alt="avatar"
-          className="w-full rounded-full border-4 border-blue-500/40 shadow-2xl hover:scale-105 transition-transform"
-        />
-      </div>
+      
     </section>
   );
 }
