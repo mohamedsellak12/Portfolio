@@ -36,6 +36,7 @@ export default function Navbar() {
       ? "backdrop-blur-xl bg-white/80 dark:bg-gray-900/80 shadow-md"
       : "bg-transparent"
   }`}
+  data-aos="fade-down"
 >
   <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
     
