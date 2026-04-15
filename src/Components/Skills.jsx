@@ -3,7 +3,13 @@ import {
   SiReact, SiAngular, SiTailwindcss, SiBootstrap,
   SiJavascript, SiTypescript, SiLaravel, SiNodedotjs,
   SiExpress, SiDjango, SiMysql, SiMongodb,
-  SiGit
+  SiGit,
+  SiSpringboot,
+  SiSpring,
+  SiFlask,
+  SiSymfony,
+  SiPostgresql,
+  SiVuedotjs
 } from "react-icons/si";
 
 
