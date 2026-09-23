@@ -43,7 +43,7 @@ export default function Footer() {
                 href="https://github.com/mohamedsellak12" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-black dark:hover:text-white transition"
+                className="hover:text-black dark:hover:text-gray-100 transition"
               >
                 <FaGithub />
               </a>
